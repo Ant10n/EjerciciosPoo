@@ -29,10 +29,49 @@ public class Kb {
         }while(notvalid);
         return resultado;
     }
+    public static Integer forceNextInt(String sout){
+        System.out.println(sout);
+        Integer resultado = null;
+        boolean notvalid=true;
+        do {
+            try {
+                resultado = nextInt();
+                notvalid=false;
+            } catch (InputMismatchException e) {
+                System.out.println("Es necesario que sea un número");
+            }
+        }while(notvalid);
+        return resultado;
+    }
+
 
     public static String nextLine(){
         Scanner keyboard = new Scanner(System.in);
         String result = keyboard.nextLine();
         return result;
+    }
+    public static String nextLine(String sout){
+        System.out.println(sout);
+        Scanner keyboard = new Scanner(System.in);
+        String result = keyboard.nextLine();
+        return result;
+    }
+
+    public static Integer getOption(Integer min, Integer max) {
+        Integer option = 0;
+        Boolean notvalid = true;
+        do {
+            try {
+                option = Kb.forceNextInt();
+                notvalid = option < min || option > max;
+            } catch (InputMismatchException e) {
+                System.out.println("La opción debe ser un número");
+                Kb.nextLine();
+            }
+            if (notvalid) {
+                System.out.println("Opción no valida, se requiere un número entre " + min + " y " + max);
+            }
+        } while (notvalid);
+        return option;
     }
 }

@@ -1,6 +1,6 @@
 package com.campusdual.campusdual.ejercicio5;
 
-import com.campusdual.ejercicio5.exceptions.*;
+import com.campusdual.campusdual.ejercicio5.exceptions.*;
 
 import java.util.ArrayList;
 import java.util.List;

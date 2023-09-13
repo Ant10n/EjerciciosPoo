@@ -21,6 +21,9 @@ La clase dieta tiene que tener las siguientes funcionalidades:
 *
 * */
 import com.campusdual.campusdual.ejemplos.alimentos.Food;
+import com.campusdual.campusdual.ejercicio5.Intake;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Diet {
@@ -29,9 +32,9 @@ public class Diet {
     private Integer maxCarbs;
     private Integer maxProtein;
 
-    private List<Intake>;
+    private List<Intake> intakeList = new ArrayList<>();
 
-    private List<avaliableFoods>;
+    private List<Food> availableFoods = new ArrayList<>();
     private String[] food;
     private String name;
     private int totalProteins;
