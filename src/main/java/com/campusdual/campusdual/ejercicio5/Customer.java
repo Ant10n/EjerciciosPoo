@@ -21,14 +21,18 @@ public class Customer {
         this.age = age;
         this.gender = gender;
     }
-    public void showPatientsDetails() {
-        Customer customer = null;
-        System.out.println("Nombre: " + customer.getName());
-        System.out.println("Apellido: " + customer.getSurname());
-        System.out.println("Peso: " + customer.getWeight() + " kg");
-        System.out.println("Altura: " + customer.getHeight() + " cm");
-        System.out.println("Edad: " + customer.getAge() + " años");
-        System.out.println("Género: " + customer.getGender());
+    public void showCustomerDetails() {
+        System.out.println("Nombre: " + this.name );
+        System.out.println("Apellido: " + this.surname);
+        System.out.println("Peso: " + this.weight);
+        System.out.println("Altura: " + this.height + " cm");
+        System.out.println("Edad: " + this.age + " años");
+        System.out.println("Género: " + this.gender);
+    }
+
+    @Override
+    public String toString(){
+        return this.getName() + " " + this.getSurname();
     }
 
     public String getName() {
