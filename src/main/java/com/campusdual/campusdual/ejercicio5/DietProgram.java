@@ -160,9 +160,9 @@ public class DietProgram {
     }
 
     private void dietManager() {
-        System.out.println("########################################################");
+        System.out.println("#######################################################");
         System.out.println("################# Gestión de dietas ###################");
-        System.out.println("########################################################");
+        System.out.println("#######################################################");
         Integer option;
         do {
             System.out.println("Escriba una opción:");
